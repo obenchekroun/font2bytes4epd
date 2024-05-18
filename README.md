@@ -40,9 +40,18 @@ The python script will generate the new `.cpp` or `.c` file within the `./output
  - add the new  `.cpp` or `.c`  font file
  - open the fonts.h and
  - add a new `extern` line with the name of the new font, e.g
-``` bash
+``` cpp
 extern sFONT FontBold40;
 ```
+ - verify that in the `.c` corresponding file, the variable is defined with the right name, as *extern* only act as a declration and not a definition
+ ```cpp
+sFONT FontBold40 = {
+	Font40_Table,
+	22, /* Width */
+	36, /* Height */
+};
+
+ ```
 
 5. [OPTIONAL] make sure that the defined `MAX_HEIGHT_FONT` and `MAX_WIDTH_FONT` are equal or bigger that the new font size. Update the values if required.
 
