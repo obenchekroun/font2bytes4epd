@@ -1,10 +1,10 @@
 from PIL import Image, ImageDraw, ImageFont
 from numpy import asarray, ceil, array, sum, concatenate
 
-filename = 'FontReg36'              #<----- select new font name
-fontname = 'Roboto-Regular.ttf'     #<----- specify the font the you intend to use. Place any font into the fonts folder
-height = 36                     #<----- new font height
-width = 22                       #<----- new fonr width
+filename = 'JetBrainMonoBoldFont38'              #<----- select new font name
+fontname = 'JetBrainsMono-Bold.ttf'     #<----- specify the font the you intend to use. Place any font into the fonts folder
+height = 50                     #<----- new font height
+width = 30                       #<----- new fonr width
 THRESHOLD = 190                  #<----- image intensity threshold for binary conversion. It changes the contrast of the final font
 
 
@@ -55,7 +55,8 @@ def write_file_intro(f):
 def write_file_closure(f):
 
     f.write('};\n\n')
-    f.write(f'sFONT Font{height} = {{\n')
+    #f.write(f'sFONT Font{height} = {{\n')
+    f.write(f'sFONT {filename} = {{\n')
     f.write(f'\tFont{height}_Table,\n')
     f.write(f'\t{width}, /* Width */\n')
     f.write(f'\t{height}, /* Height */\n')
@@ -83,7 +84,7 @@ def write_letter(hex_map):
 
 if __name__ == "__main__":
 
-    with open(f'./output/{filename}.cpp', 'w') as f:
+    with open(f'./output/{filename}.c', 'w') as f:
         write_file_intro(f)
 
         for ASCII in range(32, 127):

@@ -32,6 +32,7 @@ At this moment it only recreates ASCII caracters, but you can use any font and s
  - specify a new name for the font to create
  - specify the font name that you want to use (default is roboto-Regular)
  - specify the height and the width of the new font. 
+  Font size specifications may come in points or pixels where: 1 pixel (px) is usually assumed to be 1/96th of an inch. 1 point (pt) is assumed to be 1/72nd of an inch. Therefore 16px = 12pt. A converter can be used such as [this one](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/). 
 
 3. run the python script
 The python script will generate the new `.cpp` or `.c` file within the `./output` folder with the desired name.
