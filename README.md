@@ -4,7 +4,7 @@ Python script to create new fonts for WaveShare epaper / e-ink [EPS32 module]
 
 ## Acknowledgments
 
-Based on : [TheHeXstyle's font2byte](https://github.com/theHEXstyle/font2bytes). This project has been largely based on pycasso with a few tweaks for my needs. All credit goes to them for making this awesome project.
+Based on : [TheHeXstyle's font2byte](https://github.com/theHEXstyle/font2bytes).
 
 ## Rational
 
